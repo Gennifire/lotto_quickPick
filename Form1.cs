@@ -21,6 +21,7 @@ namespace lotto_quickPick
         {
             InitializeComponent();
             Btn_reset.Enabled = false;
+            
         }
 
         private void clear()
