@@ -36,4 +36,5 @@ Objects: Random. StringBuilder.
 fisher-yates algorithm.
 
 
-overall this is a simple project, but one i hope to expand on in the future.
+overall this is a simple project, but one i hope to expand on in the future. 
+Next projext, make app cross platform compatible.
