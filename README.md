@@ -15,7 +15,7 @@ Each click is counted and a switch statement is used to populate 10 textBoxes wi
 To prevent the same number appearing twice, i used the Fisher-yates algorithm to shuffle the numbers before they are displayed withing the text boxes.
 
 
-/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
 Items used: //fill in...
 
 3 methods used in this project: clear();, Btn_pick(); and  Btn_reset;
@@ -23,7 +23,7 @@ Clear(); allows the form to be cleared, this is called in the Btn_reset method t
 
 Btn_pick(); this generates an array for the lotto numbers 1- 47;
 
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
 
 
 New items learned:
