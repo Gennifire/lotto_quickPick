@@ -12,11 +12,15 @@ namespace lotto_quickPick
 {
     
     public partial class Form1 : Form
-    {   
+    {
         int[] LottoNum = new int[47]; //creates array to hold numbers 1-47.
         int Btnclicks = 0;
         int Reset_Btnclicks = 0;
-        int cost = 1;
+        double cost = 2.50;
+
+        
+
+
         public Form1()
         {
             InitializeComponent();
@@ -36,9 +40,11 @@ namespace lotto_quickPick
             Line8.Text = "";
             Line9.Text = "";
             Line10.Text = "";
+            CostBox.Text = "";
             Btn_pick.Enabled = true;
             
         }
+
         private void Btn_reset_Click(object sender, EventArgs e)
         {
             Reset_Btnclicks++;
@@ -46,15 +52,32 @@ namespace lotto_quickPick
             {
                 Btn_reset.Enabled = false;
             }
-            clear();
-            
+            clear();            
         }
 
         private void Btn_pick_Click(object sender, EventArgs e)
         {
+            calculation();
+
             Btnclicks++;
+
+            if (Btnclicks > 10)
+            {
+                MessageBox.Show("You have 10 Quick Picks, please reset to create more lines");
+                Btnclicks = 0; //if the button clicks > than 10, resets button clicks to 0 to allow to repopulate the table after reset
+                Btn_pick.Enabled = false;
+                Btn_reset.Enabled = true;
+            }
+
+        }
+                        
+
+        private void calculation()
+        {
+            /*----   random number generator + textBox populater   ----*/
             Random rnd = new Random(); //creates random number generator object.
-            
+
+
             for (int i = 1; i < LottoNum.Length; i++) //if set to zero goes outside scope of array and breaks, set to 1 works(find out why).
 
                 LottoNum[i - 1] = i; //should fill array "lottoNum" indexes 0-46 with 47 numbers. 
@@ -66,70 +89,62 @@ namespace lotto_quickPick
                 LottoNum[i] = LottoNum[j]; //lottoNum[i] swapped to lottoNum[j]
                 LottoNum[j] = position;  //lottoNum[j] now has lottoNum[i]'s original position 
             }
-
-            //foreach (int number in Enumerable.Range(1, 47).OrderBy(x => rnd.Next()))
-            //{
-            //    Line1.Text = string.Join("", number, " ", rnd.Next(number), " ", rnd.Next(number), " ", rnd.Next(number), " ", rnd.Next(number), " ", rnd.Next(number));
-            //} // not good has repeating numbers
-
-            /*----- this is where i'm trying to get a single button cycle through the sequence
-                    and populate the text box with 6 additional random numbers*/
-
             for (int count = 1; count < 7; count++) // count is each number on the line, if less than 7 (or == 6) 
             {
-                
+
                 switch (Btnclicks)//if Btnclick = 1 fill textBox 1 etc.
                 {
                     case 1:
                         //Line1.Text = string.Join("", LottoNum[0], "  ", LottoNum[1], "  ", LottoNum[2], "  ", LottoNum[3], "  ", LottoNum[4], "  ", LottoNum[5] );
-                        Line1.Text = Line1.Text + string.Join("", LottoNum[count], "  "); 
+                        Line1.Text = Line1.Text + string.Join("", LottoNum[count], "  ");
+                        CostBox.Text = ($"€: {cost}");
                         break;
 
                     case 2:
                         Line2.Text += string.Join("", LottoNum[count], "  "); // += lets the entire string appear in the box instead of just the last index
+                       CostBox.Text = ($"€: {cost * 2}");
                         break;
 
                     case 3:
                         Line3.Text += string.Join("", LottoNum[count], "  ");
+                        CostBox.Text = ($"€: {cost * 3}");
                         break;
 
                     case 4:
                         Line4.Text += string.Join("", LottoNum[count], "  ");
+                        CostBox.Text = ($"€: {cost * 4}");
                         break;
 
                     case 5:
-                        Line5.Text += string.Join("", LottoNum[count], "  "); 
+                        Line5.Text += string.Join("", LottoNum[count], "  ");
+                        CostBox.Text = ($"€: {cost * 5}");
                         break;
 
                     case 6:
-                        Line6.Text += string.Join("", LottoNum[count], "  "); 
+                        Line6.Text += string.Join("", LottoNum[count], "  ");
+                        CostBox.Text = ($"€: {cost * 6}");
                         break;
 
                     case 7:
-                        Line7.Text += string.Join("", LottoNum[count], "  "); 
+                        Line7.Text += string.Join("", LottoNum[count], "  ");
+                        CostBox.Text = ($"€: {cost * 7}");
                         break;
 
                     case 8:
-                        Line8.Text += string.Join("", LottoNum[count], "  "); 
+                        Line8.Text += string.Join("", LottoNum[count], "  ");
+                        CostBox.Text = ($"€: {cost * 8}");
                         break;
 
                     case 9:
                         Line9.Text += string.Join("", LottoNum[count], "  ");
+                        CostBox.Text = ($"€: {cost * 9}");
                         break;
 
                     case 10:
-                        Line10.Text += string.Join("", LottoNum[count], "  "); 
+                        Line10.Text += string.Join("", LottoNum[count], "  ");
+                        CostBox.Text = ($"€: {cost * 10}");
                         break;
                 };
-
-                if (Btnclicks > 10)
-                {
-                    MessageBox.Show("You have 10 Quick Picks, please reset to create more lines");
-                    Btnclicks = 0; //if the button clicks > than 10, resets button clicks to 0 to allow to repopulate the table after reset
-                    Btn_pick.Enabled = false;
-                    Btn_reset.Enabled = true;
-                }
-
             }
         }
     }

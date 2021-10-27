@@ -15,15 +15,15 @@ Each click is counted and a switch statement is used to populate 10 textBoxes wi
 To prevent the same number appearing twice, i used the Fisher-yates algorithm to shuffle the numbers before they are displayed withing the text boxes.
 
 
-/*--------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 Items used: //fill in...
 
-3 methods used in this project: clear();, Btn_pick(); and  Btn_reset;
+3 methods used in this project: clear();, Btn_pick(); and  Btn_reset; 
 Clear(); allows the form to be cleared, this is called in the Btn_reset method to clear all textBoxes after the form has generated 10 rows.
 
 Btn_pick(); this generates an array for the lotto numbers 1- 47;
 
-/*------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------*/
 
 
 New items learned:
@@ -36,5 +36,13 @@ Objects: Random. StringBuilder.
 fisher-yates algorithm.
 
 
-overall this is a simple project, but one i hope to expand on in the future. 
-Next projext, make app cross platform compatible.
+overall this is a simple project, but one i hope to expand on in the future, perhaps even make cross platform.
+
+/*-----------------------------------------------------------------*/
+
+
+Added a fourth method to hold onto all calculations called them into the button click.
+
+Added a running total to bottom of app. 
+Method for populating running total not great, try to add a more efficient method in futher.
+
