@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace lotto_quickPick
 {
-    
+
     public partial class Form1 : Form
     {
         int[] LottoNum = new int[47]; //creates array to hold numbers 1-47.
@@ -18,14 +18,14 @@ namespace lotto_quickPick
         int Reset_Btnclicks = 0;
         double cost = 2.50;
 
-        
+
 
 
         public Form1()
         {
             InitializeComponent();
             Btn_reset.Enabled = false;
-            
+
         }
 
         private void clear()
@@ -42,7 +42,7 @@ namespace lotto_quickPick
             Line10.Text = "";
             CostBox.Text = "";
             Btn_pick.Enabled = true;
-            
+
         }
 
         private void Btn_reset_Click(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace lotto_quickPick
             {
                 Btn_reset.Enabled = false;
             }
-            clear();            
+            clear();
         }
 
         private void Btn_pick_Click(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace lotto_quickPick
             }
 
         }
-                        
+
 
         private void calculation()
         {
@@ -102,7 +102,7 @@ namespace lotto_quickPick
 
                     case 2:
                         Line2.Text += string.Join("", LottoNum[count], "  "); // += lets the entire string appear in the box instead of just the last index
-                       CostBox.Text = ($"€: {cost * 2}");
+                        CostBox.Text = ($"€: {cost * 2}");
                         break;
 
                     case 3:

@@ -206,6 +206,7 @@ namespace lotto_quickPick
             // CostBox
             // 
             this.CostBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.CostBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.CostBox.Location = new System.Drawing.Point(736, 539);
             this.CostBox.Name = "CostBox";
             this.CostBox.Size = new System.Drawing.Size(125, 27);
@@ -370,7 +371,7 @@ namespace lotto_quickPick
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(923, 578);
+            this.ClientSize = new System.Drawing.Size(865, 578);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -402,7 +403,6 @@ namespace lotto_quickPick
             this.Controls.Add(this.Btn_pick);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
