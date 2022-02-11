@@ -1,10 +1,12 @@
-# lotto_quickPick
+#lotto_quickPick
 
 //Front of app
+
 ![nonGenerated](https://user-images.githubusercontent.com/72698786/153651290-fdcf9f8f-e420-4d51-a30a-d100bd7dd116.JPG)
 
 
 //Warning message
+
 ![warning10](https://user-images.githubusercontent.com/72698786/153651268-b2eabdf0-c07e-4e73-b578-afc27bc80005.JPG)
 
 
