@@ -1,5 +1,11 @@
 # lotto_quickPick
-//Fill this in when project is complete.
+
+//Front of app
+![nonGenerated](https://user-images.githubusercontent.com/72698786/153650431-82ccfd5d-edeb-499b-916f-b7eb7deb0f11.JPG)
+
+//Warning message
+![warning10](https://user-images.githubusercontent.com/72698786/153650437-867e385a-ed04-4ae9-8c6a-308a04c8a5a9.JPG)
+
 
 - spooky time halloween lotto number (Ireland) generator.
 
