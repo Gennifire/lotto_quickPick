@@ -51,5 +51,5 @@ New items learned:
 Added a fourth method to hold onto all calculations called them into the button click.
 
 Added a running total to bottom of app. 
-Method for populating running total not great, try to add a more efficient method in futher.
+Method for populating running total not great, try to add a more efficient method in future.
 
